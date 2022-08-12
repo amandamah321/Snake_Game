@@ -6,6 +6,7 @@ snake[0] = {
   x: 0 * box,
   y: 8 * box
 }
+let direct = 'right'
 
 function criarBG() {
   context.fillStyle = 'lightblue'
@@ -18,6 +19,13 @@ function criarCobrinha() {
     context.fillRect(snake[i].x, snake[i].y, box, box)
   }
 }
+
+function IniciarJogo() {
+  criarBG()
+  criarCobrinha()
+}
+
+let jogo = setInterval(IniciarJogo, 100)
 
 criarBG()
 criarCobrinha()
